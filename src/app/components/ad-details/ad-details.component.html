@@ -1,0 +1,13 @@
+<h5> {{ ad.title }}</h5>
+<p> {{ ad.text }}</p>
+<p> {{ ad.composition.name }}</p>
+
+<div class="wrapper">
+  <form class="composition-form" [formGroup]="form">
+    <label>Title: <input type="text" formControlName="title" name="title"/></label>
+    <label>Text: <input type="text" formControlName="text" name="text"/></label>
+    <label>CompositionID: <input type="number" formControlName="compositionId" name="composition"/></label>
+    <button type="button" (click)="submitAd()">Submit</button>
+  </form>
+  <button type="button" *ngIf="!isNew()" (click)="submitAd()">DELETE</button>
+</div>

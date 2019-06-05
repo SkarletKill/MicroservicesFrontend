@@ -1,0 +1,11 @@
+<ul>
+  <li *ngFor="let composition of data$ | async">
+    <span
+      class="description"
+      [routerLink]="'/composition/' + composition.id"
+    >
+      {{ composition.id }} {{ composition.name }}, duration is {{ composition.duration }}
+    </span>
+  </li>
+</ul>
+<button type="button" [routerLink]="'/composition/new'">ADD NEW</button>

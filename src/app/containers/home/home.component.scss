@@ -1,0 +1,23 @@
+:host {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+
+.title {
+  text-align: center;
+}
+
+.item-dashboard {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  height: 100vh;
+}

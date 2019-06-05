@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-image" [ngClass]="{
+    composition: title === 'Compositions',
+    composer: title === 'Composers',
+    statistics: title === 'Statistics',
+    advertisement: title == 'Advertisement',
+    news: title == 'News'
+  }"></div>
+  <div class="card-title">
+    {{ title }}
+  </div>
+  <div class="card-desc">
+    Sample description.
+  </div>
+  <div class="card-actions">
+    <button type='button' [routerLink]="'/' + title.toLowerCase()" class='card-action-readMore'>Go here</button>
+  </div>
+</div>

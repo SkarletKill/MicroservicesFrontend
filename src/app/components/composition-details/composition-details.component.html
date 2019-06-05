@@ -1,0 +1,13 @@
+<p>
+  {{ composition.id }} {{ composition.name }}, duration is {{ composition.duration }}
+</p>
+
+<div class="wrapper">
+  <form class="composition-form" [formGroup]="form">
+    <label>Name: <input type="text" formControlName="name" name="name"/></label>
+    <label>Duration: <input type="number" formControlName="duration" name="duration"/></label>
+    <label>ComposerId: <input type="number" formControlName="composerId" name="composerId"/></label>
+    <button type="button" (click)="submitComposition()">Submit</button>
+  </form>
+  <button type="button" *ngIf="!isNew()" (click)="deleteComposition()">DELETE</button>
+</div>

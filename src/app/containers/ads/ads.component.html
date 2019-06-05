@@ -1,0 +1,13 @@
+<ul>
+  <li *ngFor="let ad of data$ | async">
+    <div
+      class="description"
+      [routerLink]="'/advertisement/' + ad.id"
+    >
+      <h5> {{ ad.title }}</h5>
+      <p> {{ ad.text }}</p>
+      <p> {{ ad.composition.name }}</p>
+    </div>
+  </li>
+</ul>
+<button type="button" [routerLink]="'/advertisement/new'">ADD NEW</button>

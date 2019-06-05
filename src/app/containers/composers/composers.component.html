@@ -1,0 +1,12 @@
+<ul>
+  <li *ngFor="let composer of data$ | async">
+    <span
+      class="description"
+      [routerLink]="'/composer/' + composer.id"
+    >
+      {{ composer.name }} {{ composer.surname }}
+    </span>
+  </li>
+</ul>
+<button type="button" [routerLink]="'/composer/new'">ADD NEW</button>
+

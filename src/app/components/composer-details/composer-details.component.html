@@ -1,0 +1,12 @@
+<p>
+  {{ composer.name }} {{ composer.surname }}
+</p>
+
+<div class="wrapper">
+  <form class="composition-form" [formGroup]="form">
+    <label>Name: <input type="text" formControlName="name" name="name"/></label>
+    <label>Surname: <input type="text" formControlName="surname" name="surname"/></label>
+    <button type="button" (click)="submitComposer()">Submit</button>
+  </form>
+  <button type="button" *ngIf="!isNew()" (click)="deleteComposer()">DELETE</button>
+</div>

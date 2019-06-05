@@ -1,0 +1,12 @@
+<ul>
+  <li *ngFor="let news of data$ | async">
+    <div
+      class="description"
+      [routerLink]="'/news/' + news.id"
+    >
+      <h5> {{ news.title}}</h5>
+      <p> {{ news.content }}</p>
+    </div>
+  </li>
+</ul>
+<button type="button" [routerLink]="'/news/new'">ADD NEW</button>

@@ -1,0 +1,13 @@
+<div>
+  <h5> {{ news.title}}</h5>
+  <p> {{ news.content }}</p>
+</div>
+
+<div class="wrapper">
+  <form class="composition-form" [formGroup]="form">
+    <label>Title: <input type="text" formControlName="title" name="title"/></label>
+    <label>Content: <input type="text" formControlName="content" name="content"/></label>
+    <button type="button" (click)="submitNews()">Submit</button>
+  </form>
+  <button type="button" *ngIf="!isNew()" (click)="deleteNews()">DELETE</button>
+</div>
